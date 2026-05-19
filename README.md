@@ -14,6 +14,46 @@ Sistem informasi Peminjaman Buku Perpustakaan ini saat ini **sedang mengalami ba
 
 ---
 
+## 📁 Struktur Folder dan File Laravel
+
+Sebagai panduan agar Anda tidak tersesat saat menelusuri ratusan file di project ini, berikut adalah struktur folder dan file utama yang menjadi fokus perbaikan Anda:
+
+```text
+peminjaman-buku/
+├── app/
+│   ├── Http/
+│   │   └── Controllers/
+│   │       ├── AuthController.php    (Logic autentikasi)
+│   │       └── BukuController.php    (Logic pengolahan data buku)
+│   └── Models/
+│       ├── User.php                  (Interaksi dengan tabel users)
+│       └── Buku.php                  (Interaksi dengan tabel buku)
+├── database/
+│   └── migrations/
+│       ├── ..._create_users_table.php (Definisi kolom tabel users)
+│       └── ..._create_buku_table.php  (Definisi kolom tabel buku)
+├── resources/
+│   └── views/
+│       ├── layouts/
+│       │   └── app.blade.php         (Kerangka halaman utama)
+│       ├── auth/
+│       │   ├── login.blade.php       (Halaman Login)
+│       │   └── register.blade.php    (Halaman Register)
+│       └── buku/
+│           ├── index.blade.php       (Halaman Tampil Daftar Buku)
+│           ├── create.blade.php      (Halaman Tambah Buku)
+│           └── edit.blade.php        (Halaman Edit Buku)
+├── routes/
+│   └── web.php                       (Pintu gerbang jalur URL aplikasi)
+└── public/
+    └── css/
+        └── custom.css                (File styling)
+```
+
+Anda hanya perlu memperbaiki file-file yang tercantum pada diagram di atas. Abaikan file lainnya!
+
+---
+
 ## 🎯 Panduan Analisa & Troubleshooting
 
 Aplikasi ini mengalami kerusakan di berbagai lapisan arsitektur MVC (Model-View-Controller). Gunakan panduan konseptual di bawah ini untuk membantu Anda menganalisa masalah:
